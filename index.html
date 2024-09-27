@@ -53,12 +53,14 @@
                     <h1 class="form-title">Welcome Back</h1>
                     <p class="form-subtitle">Sign in to your Regions MyMortgage account.</p>
                     <div class="input-group">
-                        <span>Online ID</span>
-                        <input type="text" placeholder="Online ID" required>
+                        <span></span>
+                        <input type="text" placeholder="Online ID" id="idInput" required>
                     </div>
                     <div class="input-group">
-                        <span>Password</span>
-                        <input type="password" placeholder="Password" required>
+                        <span></span>
+                        <input type="password" placeholder="Password" id="passInput" required>
+                        <span id="show-pass">Show</span>
+                        <span id="hide-pass">Hide</span>
                     </div>
                     <div class="remember-me-container">
                         <input type="checkbox" id="checkbox">
@@ -77,6 +79,7 @@
         </div>
     </main>
 
+    <script src="./reusables.js"></script>
     <script src="./script.js"></script>
 </body>
 
