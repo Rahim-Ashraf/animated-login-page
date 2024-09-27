@@ -24,21 +24,45 @@
                     </div>
                     <div class="enroll-container">
                         <p>Are you a new customer?</p>
-                        <button class="enroll-btn">Enroll Now</button>
+                        <div class="tooltip-container">
+                            <button class="enroll-btn">Enroll Now</button>
+                            <div class="tooltip-content">
+                                <h4>Enroll now to</h4>
+                                <ul>
+                                    <li>
+                                        <div class="check-mark-icon"><img src="./assets/check-mark.png" alt="Check">
+                                        </div>
+                                        <p>Access your loans online</p>
+                                    </li>
+                                    <li>
+                                        <div class="check-mark-icon"><img src="./assets/check-mark.png" alt="Check">
+                                        </div>
+                                        <p>Pay your mortgage online</p>
+                                    </li>
+                                    <li>
+                                        <div class="check-mark-icon"><img src="./assets/check-mark.png" alt="Check">
+                                        </div>
+                                        <p>View your mortgage statements</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <form>
+                <form onsubmit="handleSubmit(event)">
                     <h1 class="form-title">Welcome Back</h1>
                     <p class="form-subtitle">Sign in to your Regions MyMortgage account.</p>
                     <div class="input-group">
+                        <span>Online ID</span>
                         <input type="text" placeholder="Online ID" required>
                     </div>
                     <div class="input-group">
+                        <span>Password</span>
                         <input type="password" placeholder="Password" required>
                     </div>
                     <div class="remember-me-container">
-                        <input type="checkbox">
-                        <p>Remember me</p>
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox">Remember me</label>
                     </div>
                     <button type="submit" class="login-btn">Login</button>
                     <div class="forgot-container">
