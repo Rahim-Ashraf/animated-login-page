@@ -20,16 +20,14 @@ form.addEventListener("submit", (e) => {
         imageContainer.classList.add("trans-with-scale-image");
         logo.classList.add("logo-image-container-effect");
         setTimeout(() => {
+            logoTitle.classList.remove("trans-with-scale");
+            enrollContainer.classList.remove("trans-with-opa");
+            form.classList.remove("trans-with-opa");
             imageContainer.classList.remove("trans-with-scale-image");
-            imageContainer.style.minWidth= "96vw";
-            imageContainer.style.height= "96vh";
-            imageContainer.style.position= "absolute";
-            imageContainer.style.top= "2vh";
-            imageContainer.style.left= "0";
-            formContainer.style.display= "none";
-            logo.style.display= "block";
+            logo.classList.remove("logo-image-container-effect");
+            window.style
 
-        }, 2000)
+        }, 7000)
 
     }, 500)
 

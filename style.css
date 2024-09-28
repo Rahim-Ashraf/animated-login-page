@@ -46,9 +46,7 @@ main {
 }
 
 .logo-image-container-effect {
-    transform: translateY(48vh)translateX(44vw)rotate(360deg);
     animation: logoEffect 5s ease forwards;
-
 }
 
 @keyframes logoEffect {
@@ -270,12 +268,13 @@ main {
     transition: transform 0.5s cubic-bezier(0.50, -0.1, 0.5, 0);
 }
 
-.logo-image-container-effect {
+.image-container-effect {
     width: 50%;
     height: 96vh;
     border-radius: 1rem;
     overflow: hidden;
 }
+
 @keyframes imageEffect {
     0% {
         transform: scale(1);
@@ -311,14 +310,56 @@ main {
 
 
 .trans-with-scale {
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 1s;
+    animation: transScaleEffect 6s ease forwards;
+}
+
+@keyframes transScaleEffect {
+    0% {
+        transform: scale(1);
+        transform-origin: left;
+    }
+
+    10% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    90% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
 }
 
 .trans-with-opa {
-    transform: translateY(50px);
-    transform-origin: top;
-    opacity: 0;
-    transition: all 1s;
+    animation: transOpaEffect 7s ease forwards;
+}
+
+@keyframes transOpaEffect {
+    0% {
+        transform: scale(1);
+        transform-origin: left;
+    }
+
+    10% {
+        transform: translateY(50px);
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    90% {
+        transform: translateY(50px);
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        transform-origin: top;
+        opacity: 1;
+    }
 }
