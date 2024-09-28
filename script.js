@@ -8,7 +8,6 @@ form.addEventListener("submit", (e) => {
     const enrollContainer = document.getElementById("enroll-container");
     const form = document.getElementById("form");
     const imageContainer = document.getElementById("image-container");
-    const formContainer = document.getElementById("form-container");
 
 
     logoTitle.classList.add("trans-with-scale");
@@ -18,16 +17,21 @@ form.addEventListener("submit", (e) => {
 
     setTimeout(() => {
         imageContainer.classList.add("trans-with-scale-image");
-        logo.classList.add("logo-image-container-effect");
+        setTimeout(() => {
+            logo.classList.add("logo-image-container-effect");
+        }, 500)
+        setTimeout(() => {
+            imageContainer.classList.add("image-container-effect");
+        }, 2000)
         setTimeout(() => {
             logoTitle.classList.remove("trans-with-scale");
             enrollContainer.classList.remove("trans-with-opa");
             form.classList.remove("trans-with-opa");
             imageContainer.classList.remove("trans-with-scale-image");
             logo.classList.remove("logo-image-container-effect");
-            window.style
+            imageContainer.classList.remove("image-container-effect");
 
-        }, 7000)
+        }, 6000)
 
     }, 500)
 
