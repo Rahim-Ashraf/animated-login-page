@@ -9,34 +9,45 @@ form.addEventListener("submit", (e) => {
     const form = document.getElementById("form");
     const imageContainer = document.getElementById("image-container");
 
-
-    logoTitle.classList.add("trans-with-scale");
-    enrollContainer.classList.add("trans-with-opa");
-    form.classList.add("trans-with-opa");
-
+    loginBtn.style.padding = "0.75rem";
+    loginBtn.innerHTML = `
+    <span class="loading"></span>
+    `;
 
     setTimeout(() => {
-        imageContainer.classList.add("trans-with-scale-image");
+
+        loginBtn.innerHTML = `Login`;
+        loginBtn.style.padding = "1rem";
+
+        logoTitle.classList.add("trans-with-scale");
+        enrollContainer.classList.add("trans-with-opa");
+        form.classList.add("trans-with-opa");
+
         setTimeout(() => {
-            logo.classList.add("logo-image-container-effect");
+            imageContainer.classList.add("trans-with-scale-image");
+            setTimeout(() => {
+                logo.classList.add("logo-image-container-effect");
+            }, 500)
+            setTimeout(() => {
+                imageContainer.classList.add("image-container-effect");
+            }, 2000)
+            setTimeout(() => {
+                logoTitle.classList.remove("trans-with-scale");
+                enrollContainer.classList.remove("trans-with-opa");
+                form.classList.remove("trans-with-opa");
+                imageContainer.classList.remove("trans-with-scale-image");
+                logo.classList.remove("logo-image-container-effect");
+                imageContainer.classList.remove("image-container-effect");
+
+            }, 6000)
+
         }, 500)
-        setTimeout(() => {
-            imageContainer.classList.add("image-container-effect");
-        }, 2000)
-        setTimeout(() => {
-            logoTitle.classList.remove("trans-with-scale");
-            enrollContainer.classList.remove("trans-with-opa");
-            form.classList.remove("trans-with-opa");
-            imageContainer.classList.remove("trans-with-scale-image");
-            logo.classList.remove("logo-image-container-effect");
-            imageContainer.classList.remove("image-container-effect");
 
-        }, 6000)
-
-    }, 500)
-
-
+        e.target.onlineId.value = "";
+        e.target.pass.value = "";
+    }, 1500)
 })
+
 
 document.getElementById("idInput").addEventListener("click", () => {
     focusOn("idInput", "Online ID")

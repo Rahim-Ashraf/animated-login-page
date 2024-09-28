@@ -12,4 +12,10 @@ const focusOut = (id) => {
     const element = document.getElementById(id);
     element.style.border = "1px solid #b2b6a6";
     element.style.boxShadow = "none";
+    if (!element.value) {
+        element.setAttribute("placeholder", element.previousElementSibling.innerText)
+        element.style.padding = "1rem";
+        element.previousElementSibling.innerText = "";
+        element.previousElementSibling.classList.remove("input-label");
+    }
 }
