@@ -11,18 +11,18 @@
 <body>
     <main>
         <div class="container">
-            <div class="form-container">
+            <div id="form-container">
                 <div class="nav-container">
                     <div class="logo-container">
-                        <div class="logo-image-container">
+                        <div id="logo-image-container">
                             <img class="logo" src="./assets/logo.png" alt="Logo">
                         </div>
-                        <div>
+                        <div id="logo-title">
                             <h2>REGIONS</h2>
                             <h4>Mortgage</h4>
                         </div>
                     </div>
-                    <div class="enroll-container">
+                    <div id="enroll-container">
                         <p>Are you a new customer?</p>
                         <div class="tooltip-container">
                             <button class="enroll-btn">Enroll Now</button>
@@ -49,16 +49,16 @@
                         </div>
                     </div>
                 </div>
-                <form onsubmit="handleSubmit(event)">
+                <form id="form">
                     <h1 class="form-title">Welcome Back</h1>
                     <p class="form-subtitle">Sign in to your Regions MyMortgage account.</p>
                     <div class="input-group">
                         <span></span>
-                        <input type="text" placeholder="Online ID" id="idInput" required>
+                        <input type="text" placeholder="Online ID" id="idInput">
                     </div>
                     <div class="input-group">
                         <span></span>
-                        <input type="password" placeholder="Password" id="passInput" required>
+                        <input type="password" placeholder="Password" id="passInput">
                         <span id="show-pass">Show</span>
                         <span id="hide-pass">Hide</span>
                     </div>
@@ -66,14 +66,14 @@
                         <input type="checkbox" id="checkbox">
                         <label for="checkbox">Remember me</label>
                     </div>
-                    <button type="submit" class="login-btn">Login</button>
+                    <button type="submit" id="login-btn">Login</button>
                     <div class="forgot-container">
                         <a href="#">Forgot Online ID?</a>
                         <a href="#">Forgot password?</a>
                     </div>
                 </form>
             </div>
-            <div class="image-container">
+            <div id="image-container">
                 <img class="image" src="./assets/image.jpeg" alt="Login Image">
             </div>
         </div>
